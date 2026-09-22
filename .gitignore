@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+qa/
+AGENTS.md
+MEMORY.md
+.env
+.env.*
+scripts/create_places.py

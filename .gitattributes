@@ -1,0 +1,5 @@
+* text=auto
+*.jpg binary
+*.png binary
+/index.html linguist-generated=true
+/data/guide.json linguist-generated=true
