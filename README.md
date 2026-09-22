@@ -6,6 +6,19 @@
 
 ![图鉴预览](docs/preview.png)
 
+## 在线使用（GitHub Pages）
+
+发布文件已就绪，仓库管理员首次需要在 [Pages设置](https://github.com/rosyForever/xian-bird-guide/settings/pages) 中选择：
+
+- **Source**：Deploy from a branch
+- **Branch**：main
+- **Folder**：/ (root)
+- 点击 **Save**
+
+启用并发布成功后，可直接打开 [在线图鉴](https://rosyforever.github.io/xian-bird-guide/)，无需下载。设置页显示“Your site is live”后才表示上线；首次发布可能需要几分钟。启用后，推送到main会更新网页。
+
+仓库提供`.nojekyll`，按原样发布静态HTML；[GitHub官方配置说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+
 ## 使用
 
 下载仓库后，用浏览器打开根目录的 **`index.html`**。无需安装依赖；约15 MB，图片和资料已嵌入。
@@ -31,7 +44,7 @@
 
 **快捷按钮：** “先认身边的鸟”筛选36种入门鸟；“9—10月秋迁”覆盖两个月中任一月的候选；“冬季水鸟”覆盖11月至次年2月的水鸟候选。前三个快捷按钮会保留地点与地点记录限制，重设其他筛选后应用快捷条件。精确组合请直接使用下拉框。
 
-**其他功能：** 点照片放大；展开卡片查看雌雄和季节差异；选2—3种并排对照；标记已见并导出CSV。已见与最近地点保存在本地，不跨设备同步。导出包含**全部已标记鸟**，不受当前筛选限制；“重置”不删除已见标记或对照项。
+**其他功能：** 鸟名下方显示生僻字读音，介绍和辨认文字也有拼音注音；点照片放大；展开卡片查看雌雄和季节差异；选2—3种并排对照；标记已见并导出CSV。已见与最近地点保存在本地，不跨设备同步。导出包含**全部已标记鸟**，不受当前筛选限制；“重置”不删除已见标记或对照项。
 
 默认显示24种，底部“继续查看”展开更多；搜索与筛选始终覆盖全部160种。页面顶部及筛选区有 **“使用指南”**，也可直接阅读 [完整使用说明](docs/使用说明.md)。
 
