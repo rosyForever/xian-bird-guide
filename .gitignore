@@ -10,3 +10,13 @@ MEMORY.md
 .env
 .env.*
 scripts/create_places.py
+
+# Local backups and authentication material
+.private-backups/
+*.bundle
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
