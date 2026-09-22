@@ -3,3 +3,6 @@
 *.png binary
 /index.html linguist-generated=true
 /data/guide.json linguist-generated=true
+
+/offline.html linguist-generated=true
+/web-assets/** linguist-generated=true

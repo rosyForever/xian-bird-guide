@@ -6,22 +6,17 @@
 
 ![图鉴预览](docs/preview.png)
 
-## 在线使用（GitHub Pages）
+## 直接打开使用
 
-发布文件已就绪，仓库管理员首次需要在 [Pages设置](https://github.com/rosyForever/xian-bird-guide/settings/pages) 中选择：
+**[打开在线图鉴](https://rosyforever.github.io/xian-bird-guide/)** · [下载单文件离线版](https://rosyforever.github.io/xian-bird-guide/offline.html)
 
-- **Source**：Deploy from a branch
-- **Branch**：main
-- **Folder**：/ (root)
-- 点击 **Save**
+手机或电脑浏览器打开在线链接即可使用，无需安装。在线版先加载文字和筛选界面，照片按需加载；离线版约15 MB，保存后无网络也能查阅。
 
-启用并发布成功后，可直接打开 [在线图鉴](https://rosyforever.github.io/xian-bird-guide/)，无需下载。设置页显示“Your site is live”后才表示上线；首次发布可能需要几分钟。启用后，推送到main会更新网页。
-
-仓库提供`.nojekyll`，按原样发布静态HTML；[GitHub官方配置说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+GitHub Pages已启用，发布来源为main分支根目录，`.nojekyll`保证按原样发布静态HTML。更新数据后先运行构建并提交生成文件，再推送main即可更新网站。
 
 ## 使用
 
-下载仓库后，用浏览器打开根目录的 **`index.html`**。无需安装依赖；约15 MB，图片和资料已嵌入。
+日常使用优先打开在线链接；需要离线时，用浏览器打开下载的 **`offline.html`**。下载整个仓库后，也能用本地 `index.html` 配合 `web-assets/` 浏览。
 
 **可以按地点找鸟，也可以按看见的特征找鸟，两种方式可以组合使用。**
 
@@ -73,7 +68,7 @@ python scripts/build_guide.py
 
 Windows 中使用 `.venv\Scripts\activate` 激活环境。
 
-构建生成 `index.html`、`data/guide.json` 和 `图片来源与许可.md`。修改界面请编辑 `scripts/template.html`，不要直接修改生成的 `index.html`。
+构建生成在线版 `index.html`、按需加载的 `web-assets/`、单文件离线版 `offline.html`、`data/guide.json` 和 `图片来源与许可.md`。修改界面请编辑 `scripts/template.html`，不要直接修改生成的 `index.html`。
 
 ## 验证
 
@@ -96,6 +91,8 @@ npm test
 | `data/sources/` | 物种页面元信息与逐图许可 |
 | `data/gbif_facets.json` | 区域记录检索快照；不作为精确公园记录 |
 | `assets/` | 160张参考照片 |
+| `web-assets/` | 构建生成的在线图片，不含EXIF |
+| `data/pronunciation.json` | 生僻字读音与参考来源 |
 | `scripts/places.py` | 地点数据校验与编译 |
 
 `places.json` 中的 `profiles` 为人工整理的生境候选集合；`records` 必须附地点级来源，不可由生境匹配自动升级而来。新增鸟类应同时维护名录、中文描述、照片与许可信息。
