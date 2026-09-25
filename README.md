@@ -8,7 +8,7 @@
 
 ## 直接打开使用
 
-**[打开在线图鉴](https://rosyforever.github.io/xian-bird-guide/)** · [下载单文件离线版](https://rosyforever.github.io/xian-bird-guide/offline.html)
+**[打开在线图鉴](https://rosyforever.github.io/xian-bird-guide/)** · [下载单文件离线版](https://rosyforever.github.io/xian-bird-guide/offline.html) · [版本更新说明](https://github.com/rosyForever/xian-bird-guide/releases)
 
 手机或电脑浏览器打开在线链接即可使用，无需安装。在线版先加载文字和筛选界面，照片与叫声按需加载；离线版约38 MB（含全部叫声），保存后无网络也能查阅。
 
