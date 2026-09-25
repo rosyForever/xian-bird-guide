@@ -12,7 +12,7 @@
 
 手机或电脑浏览器打开在线链接即可使用，无需安装。在线版先加载文字和筛选界面，照片与叫声按需加载；离线版约38 MB（含全部叫声），保存后无网络也能查阅。
 
-GitHub Pages已启用，发布来源为main分支根目录，`.nojekyll`保证按原样发布静态HTML。更新数据后先运行构建并提交生成文件，再推送main即可更新网站。
+GitHub Pages已启用，发布来源为main分支根目录，`.nojekyll`保证按原样发布静态HTML。
 
 ## 使用
 
@@ -54,50 +54,6 @@ GitHub Pages已启用，发布来源为main分支根目录，`.nojekyll`保证�
 反馈时尽量提供相关鸟名／地点、需要核对的内容、你的判断，以及可供核实的资料链接或观察照片；鸟讯可附观察月份和大致区域。不确定也可以先提出讨论，新的观察需要核实后再更新到图鉴中。
 
 请避免提交私人联系方式或敏感巢址。
-
-## 构建
-
-需要 Python 3.10+ 和 Pillow。构建完全使用仓库内的图片与元数据，不需要联网抓取资料。
-
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python scripts/build_guide.py
-```
-
-Windows 中使用 `.venv\Scripts\activate` 激活环境。
-
-构建生成在线版 `index.html`、按需加载的 `web-assets/` 与 `web-audio/`、单文件离线版 `offline.html`、`data/guide.json`、`图片来源与许可.md` 和 `声音来源与许可.md`。修改界面请编辑 `scripts/template.html`，不要直接修改生成的 `index.html`。叫声文件由 `scripts/sync_sounds.py` 从叫声收集目录同步进 `web-audio/`（收集与质检流程不在本仓库内）。
-
-## 验证
-
-```sh
-python scripts/validate_data.py
-npm install
-npx playwright install chromium
-npm test
-```
-
-浏览器检查覆盖18个地点、已记载筛选、地点与月份交集、地点记忆、快速筛选、搜索、重置、手机宽度及离线请求。可通过 `CHROMIUM_EXECUTABLE_PATH` 指定已有Chromium。
-
-## 维护数据
-
-| 文件 | 用途 |
-|---|---|
-| `data/species.tsv` | 名录、月份、生境及学习顺序 |
-| `data/descriptions.tsv` | 中文识别特点、介绍和混淆提示 |
-| `data/places.json` | 地点信息、候选生境组合、逐种记录和来源 |
-| `data/sources/` | 物种页面元信息与逐图许可 |
-| `data/gbif_facets.json` | 区域记录检索快照；不作为精确公园记录 |
-| `assets/` | 160张参考照片 |
-| `web-audio/` | 160条叫声（m4a剪辑；ND许可为原始mp3） |
-| `data/sounds.tsv` | 叫声来源、作者与许可 |
-| `web-assets/` | 构建生成的在线图片，不含EXIF |
-| `data/pronunciation.json` | 生僻字读音与参考来源 |
-| `scripts/places.py` | 地点数据校验与编译 |
-
-`places.json` 中的 `profiles` 为人工整理的生境候选集合；`records` 必须附地点级来源，不可由生境匹配自动升级而来。新增鸟类应同时维护名录、中文描述、照片与许可信息。
 
 ## 来源与许可
 
